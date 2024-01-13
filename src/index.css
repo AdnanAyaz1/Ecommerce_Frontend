@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .heading {
+    @apply text-center font-semibold text-4xl font-Urbanist;
+  }
+  .inputContainer {
+    @apply relative flex items-center mt-2 mb-8;
+  }
+  .label {
+    @apply text-2xl font-Urbanist font-medium;
+  }
+  .input {
+    @apply w-full h-full p-4 border border-black font-Urbanist text-xl focus:border-orange-600 focus:border-2 outline-orange-600;
+  }
+  .icon {
+    @apply absolute right-2 h-[25px] w-[25px] text-gray-500;
+  }
+  .inputButton {
+    @apply font-Urbanist text-2xl bg-black text-white rounded-full p-4 w-full mt-8 hover:bg-white hover:text-black duration-200 active:scale-95 shadow-xl border-2 border-black;
+  }
+  .bottomLine{
+    @apply h-1 rounded-full bg-gray-300 w-[20%] mx-auto mt-2 mb-8
+  }
+  .mainContainer{
+    @apply bg-gray-100 flex items-center justify-center py-16 px-8 min-h-screen
+  }
+  .formArea{
+    @apply py-16 px-16 border-2 w-[600px] mx-auto bg-white rounded-2xl
+  }
+}
