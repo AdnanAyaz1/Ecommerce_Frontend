@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userapi = createApi({
   reducerPath: "userapi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000",
+    baseUrl: "https://ecommerce-backend-9ec9.vercel.app",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().users?.user?.token;
 
