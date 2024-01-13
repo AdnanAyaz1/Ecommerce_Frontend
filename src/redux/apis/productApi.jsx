@@ -6,7 +6,7 @@ export const productsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://ecommerce-backend-9ec9.vercel.app",
 
-     mode: "no-cors",
+    // mode: "no-cors",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().users?.user?.token;
 
