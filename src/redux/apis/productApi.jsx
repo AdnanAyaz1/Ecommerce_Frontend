@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://ecommerce-backend-9ec9.vercel.app/",
+    baseUrl: "https://ecommerce-backend-9ec9.vercel.app",
     // mode: "no-cors",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().users?.user?.token;
