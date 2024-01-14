@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/CartSlice";
 const Details = ({ pro }) => {
-  const [bigImg, setBigImg] = useState(pro.images[1].url);
+  const [bigImg, setBigImg] = useState(pro?.images[0]?.url);
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   const increaseQuantity = () => {
@@ -28,7 +28,7 @@ const Details = ({ pro }) => {
             return (
               <div
                 className="relative rounded-lg hover:cursor-pointer group "
-                onClick={() => setBigImg(img.url)}
+                onClick={() => setBigImg(img?.url)}
               >
                 <img
                   src={img.url}
@@ -84,7 +84,7 @@ const Details = ({ pro }) => {
 
         <div className="h-0.5 rounded-full bg-slate-300 mb-4"></div>
 
-        {pro.stock >0 ? (
+        {pro.stock > 0 ? (
           <h1 className="text-4xl font-bold font-Urbanist text-green-500">
             InStock
           </h1>
